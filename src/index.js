@@ -8,11 +8,18 @@ import './index.css';
 
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import AppRoutingOne from './AppRountingOne';
+import Loginformik from './components/pure/forms/log';
+import TaskListComponent from './components/containers/task_list';
+import AxiosChuck from './components/pure/forms/axiosChuck';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+    {/* <AppRoutingOne/> */}
+    {/* <TaskListComponent></TaskListComponent> */}
+    <AxiosChuck></AxiosChuck>
   </React.StrictMode>
 );
 

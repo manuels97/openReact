@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Tareas } from '../../models/tareas';
 // import { LEVELS } from '../../models/levels.enum';
 import { Task } from '../../models/task'
 import TaskComponent from '../pure/forms/task';
@@ -13,10 +14,14 @@ const TaskListComponent = () => {
     const defaultTask2 = new Task('JUAN', 'juan@gmail.com', false);
     const defaultTask3 = new Task('ROBERT', 'robert@gmail.com', false);
 
+    // const tareaDefault1= new Tareas("Soy una tarea")
+    
+
 
     // Estado del componente
     const [tasks, setTasks] = useState([defaultTask1, defaultTask2, defaultTask3]);
     const [loading, setLoading] = useState(true);
+    // const [tareas, setTareas] = useState(tareaDefault1);
 
     // Control del ciclo de vida del componente
     useEffect(() => {
@@ -55,6 +60,13 @@ const TaskListComponent = () => {
         setTasks(tempTasks);
     }
 
+
+    // function addTarea(tarea){
+    //     const tempTarea= [...tareas];
+    //     tempTarea.push(tarea)
+    //     setTareas(tempTarea)
+    // }
+
     const Table = () => {
         return (
             <table>
@@ -64,6 +76,7 @@ const TaskListComponent = () => {
                         <th scope='col'>Mail</th>
                         <th scope='col'>Estado</th>
                         <th scope='col'>Eliminar</th>
+                        {/* <th scope='col'>Tareas</th> */}
                     </tr>
                 </thead>
                 <tbody>
@@ -74,6 +87,7 @@ const TaskListComponent = () => {
                                     task={task}
                                     complete={completeTask}
                                     remove = {deleteTask}
+                                    // tareas={tareas}
                                 >
                                 </TaskComponent>
                             )
@@ -120,7 +134,11 @@ const TaskListComponent = () => {
                     </div>
                 </div>
             </div>
-            <Taskform add={addContacto} length={tasks.length}></Taskform>
+            <Taskform add={addContacto} length={tasks.length}    ></Taskform>
+
+            
+
+            
         </div>
     );
 };

@@ -1,4 +1,4 @@
-/* .App {
+.App {
   text-align: center;
 }
 
@@ -25,7 +25,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color:beige;
 }
 
 @keyframes App-logo-spin {
@@ -35,7 +35,7 @@
   to {
     transform: rotate(360deg);
   }
-} */
+} 
 
 body{
   display: flex;
@@ -43,7 +43,7 @@ body{
   justify-content: center;
   padding-top: 40px;
   padding-bottom:40px ;
-  background-color: aqua;
+  
 }
 
 .task-action {
@@ -59,4 +59,6 @@ body{
   font-weight: bold;
   color: tomato;
 }
+
+
 

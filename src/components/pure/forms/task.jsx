@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 // Models
 import { Task } from '../../../models/task';
+import { Tareas } from '../../../models/tareas.js';
 // import { LEVELS } from '../../models/levels.enum';
 
 // Importamos la hoja de estilos de task.scss
@@ -17,38 +18,7 @@ const TaskComponent = ({ task, complete, remove }) => {
         }
     }, [task]);
 
-    /**
-     * Function that returns a Badge
-     * depending on the level of the task
-     */
-    // function taskLevelBadge(){
-    //     switch (task.level) {
-    //         case LEVELS.NORMAL:
-    //             return(
-    //             <h6 className='mb-0'>
-    //                 <span className='badge bg-primary'>
-    //                     {task.level}
-    //                 </span>
-    //             </h6>)
-    //         case LEVELS.URGENT:
-    //             return(
-    //             <h6 className='mb-0'>
-    //                 <span className='badge bg-warning'>
-    //                     {task.level}
-    //                 </span>
-    //             </h6>)
-    //         case LEVELS.BLOCKING:
-    //             return(
-    //             <h6 className='mb-0'>
-    //                 <span className='badge bg-danger'>
-    //                     {task.level}
-    //                 </span>
-    //             </h6>)
-    //         default:
-    //             break;
-    //     }
-    // }
-
+  
     /**
      * Function that returns icon depending on completion of the task
      */
@@ -89,6 +59,9 @@ const TaskComponent = ({ task, complete, remove }) => {
                 
                 <button className='bi-trash task-action' style={{color: 'tomato'}} onClick={() => remove(task)}>Eliminar</button>
             </td>
+
+        
+
         </tr>
     );
 };
